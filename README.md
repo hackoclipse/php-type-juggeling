@@ -1,4 +1,4 @@
-# php-type-juggeling
+# php type juggeling
 Research in to php type juggeling.
 
 Here are 3 versions of php type juggeling.
