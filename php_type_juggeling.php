@@ -23,17 +23,19 @@ if($three==$four){
     echo "false no json 1\n\r";
 }
 
-$array_json = json_decode($json, true); # parses json to array.
-$array_json1 = json_decode($json1, true); # parses json to array gives null.
+# parses json to array.
+$array_json = json_decode($json, true);
+$array_json1 = json_decode($json1, true);
+
 echo var_dump($array_json)."\n\r";
 
-if($one==$array_json["a"]){
+if($one==$array_json["a"]){ // int 0 to string comparison.
     echo "true json\n\r";
 }else{
     echo "false json\n\r";
 }
 
-if(strcmp($one, $array) !== 0){
+if(strcmp($one, $array) !== 0){ // string to array comparison.
     echo "\n\rtrue strcmp array\n\r";
 }else{
     echo "\n\rfalse strcmp array\n\r";
@@ -41,7 +43,7 @@ if(strcmp($one, $array) !== 0){
 
 echo var_dump($array_json1)."\n\r";
 
-if(strcmp($one, $array_json1["b"]) !== 0){
+if(strcmp($one, $array_json1["b"]) !== 0){ // string to array comparison.
     echo "true strcmp null";
 }else{
     echo "false strcmp null";
